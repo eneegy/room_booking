@@ -1,2 +1,7 @@
-# room-booking
-Room booking system
+## Room Booking
+
+room booking
+
+#### License
+
+MIT

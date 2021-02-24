@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include room_booking *.css
+recursive-include room_booking *.csv
+recursive-include room_booking *.html
+recursive-include room_booking *.ico
+recursive-include room_booking *.js
+recursive-include room_booking *.json
+recursive-include room_booking *.md
+recursive-include room_booking *.png
+recursive-include room_booking *.py
+recursive-include room_booking *.svg
+recursive-include room_booking *.txt
+recursive-exclude room_booking *.pyc
