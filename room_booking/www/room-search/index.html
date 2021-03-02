@@ -10,92 +10,101 @@
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700"> -->
     <link rel="stylesheet" href="assets/room_booking/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/room_booking.min.css">
+    <script src="assets/room_booking/js/room_service.js"></script>
 </head>
 
 <body>
     <header class="header-dark">
         <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
-            <div class="container"><a class="navbar-brand" href="#">Paris</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="#">Paris</a><button data-toggle="collapse"
+                    class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                        class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#">Tiện ích</a></li>
-                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">Phòng</a>
-                            <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false"
+                                data-toggle="dropdown" href="#">Phòng</a>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a
+                                    class="dropdown-item" href="#">Second Item</a><a class="dropdown-item"
+                                    href="#">Third Item</a></div>
                         </li>
                     </ul>
                     <form class="form-inline mr-auto" target="_self">
-                        <div class="form-group"><label for="search-field"><i class="fa fa-search"></i></label><input class="form-control search-field" type="search" id="search-field" name="search"></div>
+                        <div class="form-group"><label for="search-field"><i class="fa fa-search"></i></label><input
+                                class="form-control search-field" type="search" id="search-field" name="search"></div>
                     </form><span class="navbar-text"><a class="login" href="#">Đăng nhập</a></span>
-            </div>
+                </div>
         </nav>
         <div class="container hero">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <h1 class="text-center">Tận hưởng thiên nhiên.</h1><div><div class="section-center">
-<div class="container">
-<div class="row">
-<div class="booking-form">
-<div class="form-header">
-</div>
-<form>
-<div class="row">
-<div class="col-md-6">
-<div class="form-group">
-<span class="form-label">Ngày đến</span>
-<input class="form-control" type="date" required="">
-</div>
-</div>
-<div class="col-md-6">
-<div class="form-group">
-<span class="form-label">Ngày đi</span>
-<input class="form-control" type="date" required="">
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-4">
-<div class="form-group">
-<span class="form-label">Số lượng phòng</span>
-<select class="form-control">
-<option>1</option>
-<option>2</option>
-<option>3</option>
-</select>
-<span class="select-arrow"></span>
-</div>
-</div>
-<div class="col-md-4">
-<div class="form-group">
-<span class="form-label">Số người</span>
-<select class="form-control">
-<option>1</option>
-<option>2</option>
-<option>3</option>
-</select>
-<span class="select-arrow"></span>
-</div>
-</div>
-<div class="col-md-4">
-<div class="form-group">
-<span class="form-label">Trẻ em</span>
-<select class="form-control">
-<option>0</option>
-<option>1</option>
-<option>2</option>
-</select>
-<span class="select-arrow"></span>
-</div>
-</div>
-</div>
-<div class="form-btn">
-<button class="submit-btn">Tìm phòng trống</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
+                    <h1 class="text-center">Tận hưởng thiên nhiên.</h1>
+                    <div>
+                        <div class="section-center">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="booking-form">
+                                        <div class="form-header">
+                                        </div>
+                                        <form id="roomSearchForm">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Ngày đến</span>
+                                                        <input class="form-control" type="date" name="fromDate" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Ngày đi</span>
+                                                        <input class="form-control" type="date" name="toDate" required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Số lượng phòng</span>
+                                                        <select class="form-control" name="nomberOfRooms">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Số người</span>
+                                                        <select class="form-control" name="capacity">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Trẻ em</span>
+                                                        <select class="form-control">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-btn">
+                                                <button type="button" class="submit-btn" onclick="getAvailableRoom()">Tìm phòng trống</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
