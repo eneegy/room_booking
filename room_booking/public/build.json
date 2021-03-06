@@ -1,6 +1,8 @@
 {
 	"css/room_booking.min.css": [
-		"public/css/Header-Dark.css",
+		"public/css/header.css",
+		"public/css/footer.css",
+		"public/css/rooms.css",
         "public/css/style.css"
 	]
 }
