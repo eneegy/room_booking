@@ -22,6 +22,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Room Name",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -29,6 +30,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Room Number",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -45,7 +47,8 @@
    "fieldname": "capacity",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Capacity"
+   "label": "Capacity",
+   "reqd": 1
   },
   {
    "fieldname": "extra_capacity",
@@ -78,11 +81,12 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Room Type",
-   "options": "Hotel Room Type"
+   "options": "Room Types",
+   "reqd": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2021-03-08 19:54:36.543638",
+ "modified": "2021-03-08 20:34:58.733425",
  "modified_by": "Administrator",
  "module": "Room Booking",
  "name": "Room Details",
