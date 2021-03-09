@@ -55,9 +55,9 @@
   },
   {
    "fieldname": "room",
-   "fieldtype": "Link",
-   "label": "Room",
-   "options": "Room Details",
+   "fieldtype": "Table",
+   "label": "Rooms",
+   "options": "Room Order Item",
    "reqd": 1
   },
   {
@@ -120,7 +120,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2021-03-08 23:00:43.076803",
+ "modified": "2021-03-09 00:09:39.602114",
  "modified_by": "Administrator",
  "module": "Room Booking",
  "name": "Room Orders",

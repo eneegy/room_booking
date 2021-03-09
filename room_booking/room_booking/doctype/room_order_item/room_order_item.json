@@ -1,0 +1,49 @@
+{
+ "creation": "2021-03-09 00:08:14.687774",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "room",
+  "check_in",
+  "check_out",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room",
+   "options": "Room Details"
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Check in"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Check out"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-03-09 00:08:14.687774",
+ "modified_by": "Administrator",
+ "module": "Room Booking",
+ "name": "Room Order Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
