@@ -9,12 +9,16 @@
   "room_number",
   "description",
   "notes",
+  "detail_section",
+  "room_type",
   "capacity",
   "extra_capacity",
+  "room_facilities",
   "images",
+  "extra_break",
+  "extras",
   "status",
-  "amended_from",
-  "room_type"
+  "amended_from"
  ],
  "fields": [
   {
@@ -83,10 +87,32 @@
    "label": "Room Type",
    "options": "Room Types",
    "reqd": 1
+  },
+  {
+   "fieldname": "room_facilities",
+   "fieldtype": "Table",
+   "label": "Room Facilities",
+   "options": "Room Facilities"
+  },
+  {
+   "fieldname": "detail_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "extra_break",
+   "fieldtype": "Section Break",
+   "label": "Extras"
+  },
+  {
+   "fieldname": "extras",
+   "fieldtype": "Table",
+   "label": "Extras",
+   "options": "Room Extras"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-03-08 20:34:58.733425",
+ "modified": "2021-03-08 22:01:38.085418",
  "modified_by": "Administrator",
  "module": "Room Booking",
  "name": "Room Details",

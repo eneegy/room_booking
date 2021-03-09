@@ -7,7 +7,7 @@ async function getAvailableRoom() {
         method: 'GET',
         url: '/room-search',
         data: {
-            cmd: 'room_booking.room_booking.doctype.hotel_room_allotment.hotel_room_allotment.get_available_rooms',
+            cmd: 'room_booking.www.room-search.index.get_available_rooms',
             from_date: formData.fromDate,
             to_date: formData.toDate,
             capacity: formData.capacity
