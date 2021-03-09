@@ -1,5 +1,5 @@
 {
- "autoname": "RES-####",
+ "autoname": "RES-.####",
  "creation": "2021-03-08 22:48:03.033325",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -25,7 +25,8 @@
   {
    "fieldname": "order_date",
    "fieldtype": "Datetime",
-   "label": "Order Date"
+   "label": "Order Date",
+   "permlevel": 1
   },
   {
    "fieldname": "general_information_break",
@@ -38,6 +39,7 @@
    "in_list_view": 1,
    "label": "Customer",
    "options": "Customer",
+   "permlevel": 1,
    "reqd": 1
   },
   {
@@ -51,6 +53,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Guest Name",
+   "permlevel": 1,
    "reqd": 1
   },
   {
@@ -89,13 +92,15 @@
    "fieldname": "extras",
    "fieldtype": "Table",
    "label": "Extras",
-   "options": "Room Extras"
+   "options": "Room Extras",
+   "permlevel": 1
   },
   {
    "default": "0",
    "fieldname": "extra_total",
    "fieldtype": "Currency",
    "label": "Extras total",
+   "permlevel": 1,
    "read_only": 1
   },
   {
@@ -107,6 +112,7 @@
    "fieldname": "net_total",
    "fieldtype": "Currency",
    "label": "Net Total",
+   "permlevel": 1,
    "read_only": 1
   },
   {
@@ -115,12 +121,13 @@
    "label": "Amended From",
    "no_copy": 1,
    "options": "Room Orders",
+   "permlevel": 1,
    "print_hide": 1,
    "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2021-03-09 00:09:39.602114",
+ "modified": "2021-03-09 01:28:45.210504",
  "modified_by": "Administrator",
  "module": "Room Booking",
  "name": "Room Orders",
@@ -164,6 +171,51 @@
    "role": "Administrator",
    "share": 1,
    "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Hotel Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
    "write": 1
   }
  ],
