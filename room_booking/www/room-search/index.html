@@ -46,7 +46,7 @@
                                     <div class="booking-form">
                                         <div class="form-header">
                                         </div>
-                                        <form id="roomSearchForm">
+                                        <form id="roomSearchForm" method="GET" action="/room-list">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
@@ -65,7 +65,7 @@
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <span class="form-label">Số lượng phòng</span>
-                                                        <select class="form-control" name="nomberOfRooms">
+                                                        <select class="form-control" name="numberOfRooms">
                                                             <option>1</option>
                                                             <option>2</option>
                                                             <option>3</option>
@@ -97,7 +97,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-btn">
-                                                <button type="button" class="submit-btn" onclick="getAvailableRoom()">Tìm phòng trống</button>
+                                                <button type="submit" class="submit-btn">Tìm phòng trống</button>
                                             </div>
                                         </form>
                                     </div>
