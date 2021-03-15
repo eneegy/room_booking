@@ -21,7 +21,7 @@ def validate_query_params(params):
     except ValueError:
         return False
 
-
+@frappe.whitelist(allow_guest=True)
 def get_available_rooms(from_date, to_date, capacity, limit=5, offset=0):
     room_orders = frappe.db.get_list('Room Order Item', fields=['name', 'room'], filters={
         'check_out': ['>=', from_date],
@@ -63,7 +63,7 @@ def get_available_rooms(from_date, to_date, capacity, limit=5, offset=0):
             and capacity + extra_capacity >= %(capacity)s
             and detail.docstatus = 1
         LIMIT %(limit)s OFFSET %(offset)s
-    """, room_query_paramters, as_dict = 1, debug=True)
+    """, room_query_paramters, as_dict = 1)
     if len(room_orders) == 0:
         return rooms
     result = list(room for room in rooms if any(allotment.room == room.name for allotment in room_orders))
