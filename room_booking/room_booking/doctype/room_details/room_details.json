@@ -60,7 +60,7 @@
   },
   {
    "fieldname": "images",
-   "fieldtype": "Image",
+   "fieldtype": "Attach Image",
    "label": "Images"
   },
   {
@@ -102,7 +102,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2021-03-09 03:02:34.309055",
+ "modified": "2021-03-14 20:27:47.113391",
  "modified_by": "Administrator",
  "module": "Room Booking",
  "name": "Room Details",

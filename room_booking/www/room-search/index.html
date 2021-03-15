@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "templates/layout.html"%}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>A-DAT</title>
-    <link rel="stylesheet" href="assets/room_booking/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> -->
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700"> -->
-    <link rel="stylesheet" href="assets/room_booking/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/room_booking.min.css">
-    <script src="assets/room_booking/js/room_service.js"></script>
-</head>
-
-<body>
+{% block content%}
     <header class="header-dark">
         <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
             <div class="container"><a class="navbar-brand" href="#">Paris</a><button data-toggle="collapse"
@@ -112,8 +99,4 @@
             </div>
         </div>
     </header>
-    <script src="assets/room_booking/js/jquery.min.js"></script>
-    <script src="assets/room_booking/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+{% endblock %}
