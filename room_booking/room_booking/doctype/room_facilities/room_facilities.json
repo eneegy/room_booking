@@ -5,7 +5,8 @@
  "engine": "InnoDB",
  "field_order": [
   "facility_name",
-  "description"
+  "description",
+  "facility_icon"
  ],
  "fields": [
   {
@@ -20,9 +21,14 @@
    "fieldname": "description",
    "fieldtype": "Text",
    "label": "Description"
+  },
+  {
+   "fieldname": "facility_icon",
+   "fieldtype": "Data",
+   "label": "Icon"
   }
  ],
- "modified": "2021-03-08 21:42:12.395686",
+ "modified": "2021-03-16 02:51:35.982459",
  "modified_by": "Administrator",
  "module": "Room Booking",
  "name": "Room Facilities",
@@ -41,7 +47,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Room Facilities', {
-	// refresh: function(frm) {
-
-	// }
+	refresh: function(frm) {
+		$("input[data-fieldname|='facility_icon']").iconpicker("input[data-fieldname|='facility_icon']");
+	}
 });

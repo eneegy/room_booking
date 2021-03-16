@@ -15,8 +15,8 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = ["/assets/room_booking/css/bootstrap.min.css", "/assets/room_booking/css/font-awesome.min.css"]
-# app_include_js = ["/assets/room_booking/js/bootstrap.min.js", "/assets/room_booking/js/jquery.min.js"]
+app_include_css = ["/assets/room_booking/css/simple-iconpicker.min.css", "/assets/room_booking/css/line-awesome.min.css"]
+app_include_js = ["/assets/room_booking/js/simple-iconpicker.min.js"]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/room_booking/css/room_booking.css"
