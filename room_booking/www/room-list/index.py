@@ -39,13 +39,13 @@ def get_available_rooms(from_date, to_date, capacity, limit=5, offset=0):
             detail.name,
             detail.images,
             room_type.name as type_name,
-            room_type.room_type_rate as basic_rate,
+            room_type.rate as basic_rate,
             detail.description,
             detail.capacity,
             current_room_rate.rate
         from
             `tabRoom Details` detail
-            join `tabRoom Type` room_type
+            join `tabRoom Types` room_type
             left join (
                 select
                     room_rate.room_type,
@@ -57,9 +57,9 @@ def get_available_rooms(from_date, to_date, capacity, limit=5, offset=0):
                     period.from_date >= %(from_date)s
                     and room_rate.status = 'Active'
             ) AS current_room_rate
-            on current_room_rate.room_type = room_type.room_type
+            on current_room_rate.room_type = room_type.type_name
         where
-            detail.room_type = room_type.room_type
+            detail.room_type = room_type.type_name
             and capacity + extra_capacity >= %(capacity)s
             and detail.docstatus = 1
         LIMIT %(limit)s OFFSET %(offset)s
