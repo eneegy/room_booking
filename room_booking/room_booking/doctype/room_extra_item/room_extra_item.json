@@ -1,0 +1,36 @@
+{
+ "creation": "2021-03-21 21:29:47.664117",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "room_extra",
+  "quantity"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_extra",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room Extra",
+   "options": "Room Extras"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-03-21 23:23:55.676241",
+ "modified_by": "Administrator",
+ "module": "Room Booking",
+ "name": "Room Extra Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
