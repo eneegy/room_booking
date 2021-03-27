@@ -9,7 +9,6 @@ def get_context(context):
 def book_room():
     booking_details = json.loads(frappe.request.data)
     create_customer_if_not_exist(booking_details)
-    abc = 1
 
 def create_customer_if_not_exist(booking_details):
     internal_customer = frappe.db.get_value(
