@@ -30,8 +30,19 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px;
+  /*max-width: 200px;*/
   font-weight: 800;
+  padding-top: 9px;
+}
+
+.product-item h3 {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  /*font-weight: 800;*/
+  padding-top: 12px;
 }
 
 .product-item h2 a {
@@ -68,7 +79,7 @@
   margin-bottom: 20px;
 }
 
-.product-item button {
+.product-item button, .form-panel button {
   border-radius: 2px;
   width: 100%;
   background: #04bebe;
@@ -80,24 +91,24 @@
   padding: 8px 20px;
 }
 
-.product-item button:active {
-  background: #87bae1;
+button:active, button:active {
+  background: #26e0e0;
   color: #fff;
   border: 0;
 }
 
-.product-item button:focus {
+button:focus {
   background: #87bae1;
   outline: none;
   color: #fff;
 }
 
-.product-item button:hover {
+button:hover {
   background: #66ABE0;
   color: #fff;
 }
 
-.product-item button:focus:active {
+button:focus:active {
   background: #87bae1;
   outline: none;
   color: #fff;
@@ -106,7 +117,15 @@
 .product-item .product-price {
   color: #4e4e4e;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+  padding-top: 5px;
+  text-align: right;
+}
+
+.product-price {
+  color: #4e4e4e;
+  font-weight: bold;
+  font-size: 18px;
   padding-top: 5px;
   text-align: right;
 }

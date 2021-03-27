@@ -54,7 +54,8 @@ def get_available_rooms(from_date, to_date, capacity, limit=5, offset=0):
                     `tabHotel Room Rate` room_rate
                     inner join `tabPeriods` period on room_rate.period = period.periods_name
                 where
-                    period.from_date >= %(from_date)s
+                    DATE(period.from_date) >= %(from_date)s
+                    and DATE(period.to_date) <= %(from_date)s
                     and room_rate.status = 'Active'
             ) AS current_room_rate
             on current_room_rate.room_type = room_type.type_name

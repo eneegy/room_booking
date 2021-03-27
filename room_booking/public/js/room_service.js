@@ -21,11 +21,14 @@ async function bookRoom() {
             city: formData["guestCity"],
             state: formData["guestState"]
         },
-        booking_detail: {
-            check_in: formData["checkin"],
-            check_out: formData["checkout"],
-            room: ""
-        }
+        room_list: [
+            {
+                check_in: formData["checkin"],
+                check_out: formData["checkout"],
+                room_name: formData["_room"]
+            }
+        ],
+        extras: getExtras()
     }
     $.ajax({
         method: 'POST',
@@ -39,4 +42,29 @@ async function bookRoom() {
             console.log(response);
         }
     });
+}
+
+function getExtras() {
+    const result = [];
+    const extrasSelector = $('select option:selected');
+    for (i = 0; i < extrasSelector.length; i++) {
+        result.push({
+            name: extrasSelector[i].text,
+            quantity: 1
+        })
+    }
+    return result;
+}
+
+function extrasChanged() {
+    let extrasPrice = 0;
+    const extrasSelector = $('select option:selected');
+    for (i = 0; i < extrasSelector.length; i++) {
+        extrasPrice += parseInt(extrasSelector[i].value);
+    }
+    $('#extrasPrice').html(extrasPrice);
+}
+
+function moveToBookingForm(roomName) {
+    window.location.href = '/room-booking?roomName=' + roomName;
 }
