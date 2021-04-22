@@ -31,55 +31,60 @@
             <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 form-panel">
                 <div class="panel-container">
                     <form id="roomBookingForm">
-                        <div class="form-group">
-                          <label for="guestName">First Name</label>
-                          <input type="text" class="form-control" id="guestFirstName" name="guestFirstName" placeholder="Enter first name ">
+                        <div class="form-group col-md-4 col-sm-12 col-xs-12">
+                            <label for="guestName">Họ</label>
+                            <input type="text" class="form-control" id="guestLastName" name="guestLastName" placeholder="Enter last name ">
                         </div>
-                        <div class="form-group">
-                            <label for="guestName">Middle Name</label>
-                            <input type="text" class="form-control" id="guestMiddleName" name="guestMiddleName"  placeholder="Enter middle name ">
+                        <div class="form-group col-md-4 col-sm-12 col-xs-12">
+                            <label for="guestName">Chữ lót</label>
+                            <input type="text" class="form-control" id="guestMiddleName" name="guestMiddleName"
+                                placeholder="Enter middle name ">
                         </div>
-                        <div class="form-group">
-                            <label for="guestName">Last Name</label>
-                            <input type="text" class="form-control" id="guestLastName" name="guestLastName"  placeholder="Enter last name ">
+                        <div class="form-group col-md-4 col-sm-12 col-xs-12">
+                            <label for="guestName">Tên</label>
+                            <input type="text" class="form-control" id="guestFirstName" name="guestFirstName"
+                                placeholder="Enter first name ">
                         </div>
-                        <div class="form-group">
-                          <label for="idNumber">Identification / passport number</label>
-                          <input type="number" class="form-control" id="idNumber" name="idNumber" placeholder="Identification / passport number">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <label for="idNumber">Chứng minh thư / passport number</label>
+                            <input type="number" class="form-control" id="idNumber" name="idNumber"
+                                placeholder="Identification / passport number">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
                             <label for="guestEmail">Email</label>
                             <input type="email" class="form-control" id="guestEmail" name="guestEmail" placeholder="Email">
                         </div>
-                        <div class="form-group">
-                            <label for="guestPhoneNumber">Phone number</label>
-                            <input type="text" class="form-control" id="guestPhoneNumber" name="guestPhoneNumber" placeholder="Phone number">
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                            <label for="guestPhoneNumber">Điện thoại</label>
+                            <input type="text" class="form-control" id="guestPhoneNumber" name="guestPhoneNumber"
+                                placeholder="Phone number">
                         </div>
-                        <div class="form-group">
-                            <label for="guestAddressLine">Address line</label>
-                            <input type="text" class="form-control" id="guestAddressLine" name="guestAddressLine" placeholder="Address line">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <label for="guestAddressLine">Địa chỉ</label>
+                            <input type="text" class="form-control" id="guestAddressLine" name="guestAddressLine"
+                                placeholder="Address line">
                         </div>
-                        <div class="form-group">
-                            <label for="guestState">State</label>
+                        <div class="form-group col-md-4 col-sm-12 col-xs-12">
+                            <label for="guestState">Tỉnh</label>
                             <input type="text" class="form-control" id="guestState" name="guestState" placeholder="State">
                         </div>
-                        <div class="form-group">
-                            <label for="guestCity">City</label>
+                        <div class="form-group col-md-4 col-sm-12 col-xs-12">
+                            <label for="guestCity">Thành phố</label>
                             <input type="text" class="form-control" id="guestCity" name="guestCity" placeholder="City">
                         </div>
-                        <div class="form-group">
-                            <label for="guestCountry">Country</label>
+                        <div class="form-group col-md-4 col-sm-12 col-xs-12">
+                            <label for="guestCountry">Quốc gia</label>
                             <input type="text" class="form-control" id="guestCountry" name="guestCountry" placeholder="Country">
                         </div>
-                        <div class="form-group">
-                            <label for="checkin">Check in</label>
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                            <label for="checkin">Ngày đến</label>
                             <input type="date" class="form-control" id="checkin" name="checkin" placeholder="Check in">
                         </div>
-                        <div class="form-group">
-                            <label for="checkout">Check out</label>
+                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                            <label for="checkout">Ngày đi</label>
                             <input type="date" class="form-control" id="checkout" name="checkout" placeholder="Check out">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
                             <select id="extrasSelector" class="form-select" multiple onchange="extrasChanged()">
                                 {% for extra in extras %}
                                 <option value="{{extra.rate}}">{{extra.extra_name}}</option>
@@ -89,7 +94,7 @@
                         <input type="hidden" name="_token" value="{{ frappe.session.csrf_token }}" />
                         <input type="hidden" name="_room" value="{{ room }}" />
                         <button type="button" onclick="bookRoom()" class="btn btn-primary">Submit</button>
-                      </form>
+                    </form>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4 form-panel">
